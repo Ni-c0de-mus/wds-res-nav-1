@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee|Hind|PT+Sans|Pacifico|Poppins|Lobster|Audiowide|Great+Vibes|Comfortaa|Orbitron|Tajawal|Livvic|Fira+Sans|Unica+One|Rajdhani");
+
+*,
+*::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --old-gold: #B8B42D;
+    --olive-drab: #697A21;
+    --wild-blue: #96ADC8;
+    --tea-green: #D7FFAB;
+    --unmellow-yellow: #FCFF6C;
+    --brown-yellow: #D89D6A;
+    --tuscan-red: #6D454C;
+    --spring-bud: #CACF85;
+    --cosmic-latte: #FFFCE8;
+    --mount-pink: #996888;
+    --sapphire-blue: #006BA6;
+    --great-vibes: 'Great Vibes', cursive;
+    --comfortaa: 'Comfortaa', cursive;
+    --orbitron: 'Orbitron', sans-serif;
+    --audiowide: 'Audiowide', cursive;
+    --rajdhani: 'Rajdhani', sans-serif;
+}
+
+html {
+    font-family: var(--rajdhani);
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--wild-blue);
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-style: bold;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mount-pink);
+    color: var(--cosmic-latte);
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--cosmic-latte);
+    padding: 1rem 2rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: var(--spring-bud);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--cosmic-latte);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .toggle-button {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        background-color: var(--mount-pink);
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .brand-title {
+        padding-top: 1rem;
+    }
+}
